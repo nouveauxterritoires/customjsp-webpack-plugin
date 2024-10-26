@@ -1,12 +1,12 @@
 # Jsp WebPack Plugin
-This plugin intends for generate *.jsp file (with injected your bundles and chunks)
+This plugin intends for generate *.jsp file with injected your bundles and chunks on a tag html.
 
 # Install
-`npm i --save-dev jsp-webpack-plugin`
+`npm i --save-dev customjsp-webpack-plugin`
 
 or
 
-`yarn add --dev jsp-webpack-plugin`
+`yarn add --dev customjsp-webpack-plugin`
 
 # Usage
 
@@ -14,7 +14,7 @@ or
 
 ```
 const path = require('path');
-const JspWebpackPlugin = require('jsp-webpack-plugin');
+const CustomJspWebpackPlugin = require('customjsp-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'index.js'),
