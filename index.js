@@ -13,6 +13,7 @@ class JspWebPackPlugin {
                 template: path.join(__dirname, 'index.jsp'),
                 useBuildPath: true,
                 filename: 'index.jsp',
+                tag: 'script'
             },
             options
         );
@@ -57,25 +58,30 @@ class JspWebPackPlugin {
     }
 
     insertScript(chunk) {
-        const bodyRegExp = /(<\/body\s*>)/i;
+        const scriptRegExp = /(<script data-type="webpack"\s*/>)/i;
         const scriptTag = this.generateScriptTag(chunk);
-
-        if (bodyRegExp.test(this.jspFile)) {
-            // Append assets to body element
-            this.jspFile = this.jspFile.replace(bodyRegExp, match => scriptTag + match);
+        const tag = this.options.tag;
+        
+        if (scriptRegExp.test(this.jspFile)) {
+            // Replace assets to script element
+            this.jspFile = this.jspFile.replace(scriptRegExp, match => scriptTag);
         } else {
-            // Append scripts to the end of the file if no <body> element exists:
-            this.jspFile += chunk;
+            // Append scripts to the end of the file if no <script> element exists:
+            this.jspFile += scriptTag;
         }
     }
 
     insertStyle(chunk) {
-        const headRegExp = /(<\/head\s*>)/i;
+        const linkRegExp = /(<link data-type="webpack"\s*/>)/i;
         const styleTag = this.generateStyleTag(chunk);
-
-        if (headRegExp.test(this.jspFile)) {
-            // Append assets to head element
-            this.jspFile = this.jspFile.replace(headRegExp, match => styleTag + match);
+        const tag = this.options.tag;
+        
+        if (linkRegExp.test(this.jspFile)) {
+            // Replace assets to link element
+            this.jspFile = this.jspFile.replace(linkRegExp, match => styleTag);
+        } else {
+            // Replace scripts to the end of the file if no <link> element exists:
+            this.jspFile += styleTag;
         }
     }
 
