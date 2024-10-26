@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AkpoFlash/jsp-webpack-plugin.git"
+    "url": "git+https://github.com/nouveauxterritoires/customjsp-webpack-plugin.git"
   },
   "keywords": [
     "jsp",
@@ -17,12 +17,12 @@
     "java",
     "html"
   ],
-  "author": "Julien Redondov",
+  "author": "Julien Redondo",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/AkpoFlash/jsp-webpack-plugin/issues"
+    "url": "https://github.com/nouveauxterritoires/customjsp-webpack-plugin.git/issues"
   },
-  "homepage": "https://github.com/AkpoFlash/jsp-webpack-plugin#readme",
+  "homepage": "hhttps://github.com/nouveauxterritoires/customjsp-webpack-plugin.git#readme",
   "dependencies": {
     "lodash": "^4.17.11"
   }
