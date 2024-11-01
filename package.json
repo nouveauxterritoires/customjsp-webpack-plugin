@@ -1,6 +1,6 @@
 {
   "name": "@nouveaux-territoires/customjsp-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This plugin insert in  a jsp file your bundles and chunks.",
   "main": "index.js",
   "scripts": {
