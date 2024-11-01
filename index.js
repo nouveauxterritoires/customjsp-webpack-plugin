@@ -1,6 +1,10 @@
 const path = require('path');
 const fs = require('fs');
 
+const extend = require('lodash/extend');
+const flatten = require('lodash/flatten');
+const uniq = require('lodash/uniq');
+
 class CustomJspWebPackPlugin {
     constructor(options) {
         // Default options
