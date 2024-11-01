@@ -1,7 +1,7 @@
 {
   "name": "@nouveaux-territoires/customjsp-webpack-plugin",
-  "version": "1.0.0",
-  "description": "This plugin intends for generate *.jsp file with injected your bundles and chunks on a tag html.",
+  "version": "1.0.1",
+  "description": "This plugin insert in  a jsp file your bundles and chunks.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

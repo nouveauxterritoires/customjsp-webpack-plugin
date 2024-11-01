@@ -58,7 +58,7 @@ class JspWebPackPlugin {
     }
 
     insertScript(chunk) {
-        const scriptRegExp = /(<script data-type="webpack"\s*/>)/i;
+        const scriptRegExp = /(<script data-type="webpack"\s*\/>)/i;
         const scriptTag = this.generateScriptTag(chunk);
         const tag = this.options.tag;
         
@@ -72,7 +72,7 @@ class JspWebPackPlugin {
     }
 
     insertStyle(chunk) {
-        const linkRegExp = /(<link data-type="webpack"\s*/>)/i;
+        const linkRegExp = /(<link data-type="webpack"\s*\/>)/i;
         const styleTag = this.generateStyleTag(chunk);
         const tag = this.options.tag;
         
